@@ -93,3 +93,10 @@
 			});
 
 })(jQuery);
+
+
+
+// Comment Section JavaScript
+document.getElementById('comment-btn').addEventListener('click',function(){
+	document.getElementById('comment-section').classList.toggle("hide");
+});
