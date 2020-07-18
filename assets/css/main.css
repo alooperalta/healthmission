@@ -7,12 +7,86 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+/*.btn-floating{
+
+}
+
+.mx-1{
+
+}
+
+.fab{
+
+}
+
+.fa-instagram{
+
+}
+
+.fa-twitter{
+
+}
+
+.fa-facbook{
+
+}
+
+.btn-tw{
+
+}
+
+.btn-fb{
+
+}
+
+.btn-ig{
+
+}
+
+.list-inline-item{
+
+}
+
+.list-unstyled{
+
+}
+
+.list-inline{
+
+}
+
+.text-center{
+
+}
+
+.page-footer{
+
+}
+
+.font-small{
+
+}
+
+.special-color-dark{
+
+}
+
+.pt-4{
+
+}
+
+*/
 .hide{
 	display: none;
 }
 
 .comment-section{
 	text-align: left;
+}
+
+.footer-hr{
+	width: 85%;
+	margin: auto;
 }
 
 
@@ -25,7 +99,8 @@ u, i, center, dl, dt, dd, ol, ul, li, fieldset,
 form, label, legend, table, caption, tbody,
 tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
+/* footer,  */
+header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -35,7 +110,8 @@ section, summary, time, mark, audio, video {
 	vertical-align: baseline;}
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+/* footer, */
+ header, hgroup, menu, nav, section {
 	display: block;}
 
 body {
@@ -2825,16 +2901,7 @@ input, select, textarea {
 				transform: scale(1.05);
 			}
 
-		.post > footer {
-			display: -moz-flex;
-			display: -webkit-flex;
-			display: -ms-flex;
-			display: flex;
-			-moz-align-items: center;
-			-webkit-align-items: center;
-			-ms-align-items: center;
-			align-items: center;
-		}
+
 
 			.post > footer .actions {
 				-moz-flex-grow: 1;
