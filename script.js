@@ -30,6 +30,11 @@ const image = [
     'images/healBanner.png'
 ];
 
+const links = [
+    'images/EBSB_REPORT.pdf',
+    'single.html'
+];
+
 const content = [
     'The first EBSB day was observed on 14th February, 2020. The member students gathered near the central library area of the University and invoked Goddess of wisdom. Thereafter, they came to the Flag hosting area and paid homeage to the Pulwama Martyrs. The programme of the day started by taking pledge about the fundamental duties of citizens followed by recital of its \'Mission\'.',
     'Heal app is a personal guide to holistic health and happiness. It can help you to focus on your Physical health and mental health and also aid you to improve your immunity.'
@@ -52,23 +57,23 @@ const completeContent = [
 
 var posts = document.getElementById("posts");
 for(var i=0; i < heading.length; i++){
-
+let item = heading.length - i - 1;
 posts.innerHTML += '<article class="post">\
 <header>\
     <div class="title">\
-        <h2><a href="images/EBSB_REPORT.pdf">'+ heading[i] + '</a></h2>\
-        <p>'+ subHeading[i] +'</p>\
+        <h2><a href="'+ links[item] +'">'+ heading[item] + '</a></h2>\
+        <p>'+ subHeading[item] +'</p>\
     </div>\
     <div class="meta">\
-        <time class="published">'+ date[i] +'</time>\
-        <a href="#" class="author"><span class="name">'+ author[i] +'</span><img src="'+ authorImage[i] +'" alt="" /></a>\
+        <time class="published">'+ date[item] +'</time>\
+        <a href="#" class="author"><span class="name">'+ author[item] +'</span><img src="'+ authorImage[item] +'" alt="" /></a>\
     </div>\
 </header>\
-<a href="images/EBSB_REPORT.pdf" class="image featured"><img src="'+ image[i] +'" alt="" /></a>\
-<p>'+ content[i] +'</p>\
+<a href="'+ links[item] +'" class="image featured"><img src="'+ image[item] +'" alt="" /></a>\
+<p>'+ content[item] +'</p>\
 <footer>\
     <ul class="actions">\
-        <li><a href="images/EBSB_REPORT.pdf" class="button large">Continue Reading</a></li>\
+        <li><a href="'+ links[item] +'" class="button large">Continue Reading</a></li>\
     </ul>\
     <ul class="stats">\
         <li><a href="#">General</a></li>\
@@ -81,27 +86,27 @@ posts.innerHTML += '<article class="post">\
 
 var miniPosts = document.getElementById("miniPosts");
 for(var i=0; i < heading.length; i++){
-
+let item = heading.length - i - 1;
 miniPosts.innerHTML += '<article class="mini-post">\
 <header>\
-    <h3><a href="images/EBSB_REPORT.pdf">'+ heading[i] +'</a></h3>\
-    <time class="published">'+ date[i] +'</time>\
-    <a href="#" class="author"><img src="'+authorImage[i]+'" alt="" /></a>\
+    <h3><a href="'+links[item]+'">'+ heading[item] +'</a></h3>\
+    <time class="published">'+ date[item] +'</time>\
+    <a href="#" class="author"><img src="'+authorImage[item]+'" alt="" /></a>\
 </header>\
-<a href="images/EBSB_REPORT.pdf" class="image"><img src="'+image[i]+'" alt="" /></a>\
+<a href="'+links[item]+'" class="image"><img src="'+image[item]+'" alt="" /></a>\
 </article>';
 }
 
 var postsNoImage = document.getElementById("postsNoImage");
 for(var i=0; i < heading.length; i++){
-
+let item = heading.length - i - 1;
 postsNoImage.innerHTML += '<li>\
         <article>\
             <header>\
-                <h3><a href="images/EBSB_REPORT.pdf">'+ heading[i] +'</a></h3>\
-                <time class="published">'+ date[i] +'</time>\
+                <h3><a href="'+links[item]+'">'+ heading[item] +'</a></h3>\
+                <time class="published">'+ date[item] +'</time>\
             </header>\
-            <a href="images/EBSB_REPORT.pdf" class="image"><img src="'+ authorImage[i] +'" alt="" /></a>\
+            <a href="'+links[item]+'" class="image"><img src="'+ authorImage[item] +'" alt="" /></a>\
         </article>\
     </li>';
 }
