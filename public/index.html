@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EBSB : GGSIPU</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.4.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.4.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.4.3/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+  </head>
+  <body class="is-preload">
+    <div class="no-bootstrap">
+      <!-- Wrapper -->
+      <div id="wrapper">
+  
+        <!-- Header -->
+        <header id="header">
+          <h1><a href="index.html">Health Mission : GGSIPU</a></h1>
+          <nav class="links">
+            <ul>
+              <!-- <li><a href="#">Lorem</a></li> -->
+              <li><a href="http://ipu.ac.in/">GGSIPU</a></li>
+              <li><a href="#">Upcoming Events</a></li>
+              <li><a href="#">Members</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </nav>
+          <nav class="main">
+            <ul>
+              <li class="search">
+                <a class="fa-search" href="#search">Search</a>
+                <form id="search" method="get" action="#">
+                  <input type="text" name="query" placeholder="Search" />
+                </form>
+              </li>
+              <li class="menu">
+                <a class="fa-bars" href="#menu">Menu</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+  
+        <!-- Menu -->
+        <section id="menu">
+          <!-- Search -->
+          <section>
+            <form class="search" method="get" action="#">
+              <input type="text" name="query" placeholder="Search" />
+            </form>
+          </section>
+  
+          <!-- Links -->
+          <section>
+            <ul class="links">
+              <li>
+                <a href="http://ipu.ac.in/">
+                  <h3>GGSIPU</h3>
+                  <p>official website of ggsipu</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h3>Upcomming Events</h3>
+                  <p>Know about the upcoming events of Health Mission</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h3>Members</h3>
+                  <p>Meet the people behind the mission</p>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <h3>Contact us</h3>
+                  <p>Share your suggestions with us</p>
+                </a>
+              </li>
+            </ul>
+          </section>
+  
+          <!-- Actions -->
+          <section>
+            <ul class="actions stacked">
+              <li><a href="#" class="button large fit">Log In</a></li>
+            </ul>
+          </section>
+  
+        </section>
+  
+        <!-- Main -->
+        <div id="main">
+  
+          <!-- Post -->
+          <!--Dynamically added-->
+          <div id="posts"></div>
+  
+          <!-- Pagination -->
+          <ul class="actions pagination">
+            <li><a href="" class="disabled button large previous">Previous Page</a></li>
+            <li><a href="#" class="button large next">Next Page</a></li>
+          </ul>
+  
+        </div>
+  
+        <!-- Sidebar -->
+        <section id="sidebar">
+  
+          <!-- Intro -->
+          <section id="intro">
+            <a href="#" class="logo"><img src="images/ipuLogo.png" alt="" /></a>
+            <header>
+              <h2>Health Mission</h2>
+              <p>EK BHARAT SHRESTHA BHARAT</p>
+              <p>GGSIPU</p>
+            </header>
+          </section>
+  
+          <!-- About -->
+          <section class="blurb">
+            <h2>Vision</h2>
+            <p>Sanyukt Bharat, Sarvopari Bharat, Sarvashreshtha Bharat, Sarvasampann Bharat, Sarvahitkari Bharat</p>
+            <ul class="actions">
+              <li><a href="#" class="button">Learn More</a></li>
+            </ul>
+          </section>
+  
+          <!-- Mini Posts -->
+          <section>
+            <div class="mini-posts">
+  
+              <!-- Mini Post -->
+              <div id="miniPosts"></div>
+  
+            </div>
+          </section>
+  
+          <!-- Posts List -->
+          <section>
+            <ul class="posts" id="postsNoImage">
+              <!--Posts Without Images-->
+            </ul>
+          </section>
+      </div>
+    </div>
+    <!-- Footer -->
+    <section>
+      <hr class="footer-hr">
+      <!-- Footer -->
+      <footer class="page-footer font-small special-color-dark pt-4">
+  
+        <!-- Footer Elements -->
+        <!-- <div class="container"> -->
+        <div class="container">
+          <!-- Social buttons -->
+          <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+              <a class="btn-floating btn-fb mx-1">
+                <i class="fab fa-facebook-f"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a class="btn-floating btn-tw mx-1">
+                <i class="fab fa-twitter"> </i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="https://www.instagram.com/ebsb_ggsipu/?hl=en" class="btn-floating btn-ig mx-1">
+                <i class="fab fa-instagram"> </i>
+              </a>
+            </li>
+          </ul>
+          <!-- Social buttons -->
+  
+        </div>
+        <!-- Footer Elements -->
+  
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2021 Copyright:
+          <a href="http://ipu.ac.in/"> GGSIPU</a>
+        </div>
+        <!-- Copyright -->
+  
+      </footer>
+      <!-- Footer -->
+  
+    </section>
+  
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const loadEl = document.querySelector('#load');
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.firestore().doc('/foo/bar').get().then(() => { });
+        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        // firebase.analytics(); // call to activate
+        // firebase.analytics().logEvent('tutorial_completed');
+        // firebase.performance(); // call to activate
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = [
+            'auth', 
+            'database', 
+            'firestore',
+            'functions',
+            'messaging', 
+            'storage', 
+            'analytics', 
+            'remoteConfig',
+            'performance',
+          ].filter(feature => typeof app[feature] === 'function');
+          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
