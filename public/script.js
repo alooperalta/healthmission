@@ -32,7 +32,7 @@ const image = [
 
 const links = [
     'images/EBSB_REPORT.pdf',
-    'single.html'
+    'https://play.google.com/store/apps/details?id=com.himeshnayak.healapp'
 ];
 
 const content = [
