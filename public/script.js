@@ -32,7 +32,7 @@ const image = [
 
 const links = [
     'images/EBSB_REPORT.pdf',
-    'single.html'
+    'https://play.google.com/store/apps/details?id=com.himeshnayak.healapp'
 ];
 
 const content = [
@@ -75,11 +75,11 @@ posts.innerHTML += '<article class="post">\
     <ul class="actions">\
         <li><a href="'+ links[item] +'" class="button large">Continue Reading</a></li>\
     </ul>\
-    <ul class="stats">\
+    <!-- <ul class="stats">\
         <li><a href="#">General</a></li>\
         <li><a href="#" class="icon solid fa-heart">28</a></li>\
         <li><a href="#" class="icon solid fa-comment">128</a></li>\
-    </ul>\
+    </ul> -->\
 </footer>\
 </article>';
 }
